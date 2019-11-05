@@ -1,0 +1,8 @@
+INCLUDES += emc/motion
+
+../include/%.h: ./emc/motion/%.h
+	$(ECHO) Copying header file $@
+	$(Q)cp $^ $@
+../include/%.hh: ./emc/motion/%.hh
+	$(ECHO) Copying header file $@
+	$(Q)cp $^ $@
